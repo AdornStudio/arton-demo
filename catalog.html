@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сповіщувачі пожежні — каталог АРТОН</title>
+<meta name="description" content="Димові, теплові, мультисенсорні та ручні пожежні сповіщувачі АРТОН: характеристики, класи ДСТУ EN 54-5, паспорти й сертифікати.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f7f9fc">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght,SHRP@300..800,0..100&family=Fira+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body data-page="catalog">
+<div data-header></div>
+
+<main class="wrap">
+  <nav class="crumbs" aria-label="Навігація">
+    <a href="index.html">Головна</a><svg class="icon" aria-hidden="true"><use href="#i-chev"/></svg>
+    <a href="index.html#products">Продукція</a><svg class="icon" aria-hidden="true"><use href="#i-chev"/></svg>
+    <span aria-current="page">Сповіщувачі пожежні</span>
+  </nav>
+
+  <header class="cat-head">
+    <div>
+      <h1>Сповіщувачі пожежні</h1>
+      <p>Димові, теплові, мультисенсорні та ручні сповіщувачі власного виробництва. Відфільтруйте за класом, підключенням чи наявністю сертифіката ЄС і порівняйте моделі поруч.</p>
+    </div>
+    <div class="cat-head__count"><b class="num" data-total>0</b>моделей у розділі</div>
+  </header>
+
+  <div class="types" role="group" aria-label="Тип сповіщувача" data-types></div>
+
+  <div class="cat">
+    <aside class="filters" id="filters" aria-label="Фільтри">
+      <div style="display:flex;justify-content:space-between;align-items:center" class="filters__mhead">
+        <h2 style="font-size:22px">Фільтри</h2>
+        <button class="sheet__close filters-btn" type="button" aria-label="Закрити фільтри" data-filters-close><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+      </div>
+      <div class="fgroup">
+        <h3>Клас за ДСТУ EN 54-5</h3>
+        <div class="fgroup__opts" data-f="cls"></div>
+      </div>
+      <div class="fgroup">
+        <h3>Підключення до ППКП</h3>
+        <div class="fgroup__opts" data-f="wires"></div>
+      </div>
+      <div class="fgroup">
+        <h3>Регіон поставки</h3>
+        <div class="fgroup__opts" data-f="region"></div>
+      </div>
+      <div class="fgroup">
+        <h3>Документи й індикація</h3>
+        <label class="check"><input type="checkbox" data-flag="eu">Є сертифікат ЄС</label>
+        <label class="check"><input type="checkbox" data-flag="scheme">Є схема підключення</label>
+        <label class="check"><input type="checkbox" data-flag="duty">Індикація чергового режиму</label>
+      </div>
+      <button class="filters__reset" type="button" data-reset>Скинути фільтри</button>
+      <div class="filters__help">
+        <b>Не знаєте, який клас потрібен?</b>
+        Підбір за температурою приміщення — на <a href="index.html#select">головній</a>. Або зателефонуйте технічному фахівцю: <a class="mono" href="tel:+380504340326">050 434-03-26</a>
+      </div>
+      <button class="btn btn--ink filters-btn" type="button" data-filters-close style="width:100%">Показати результати</button>
+    </aside>
+
+    <section aria-label="Результати">
+      <div class="toolbar">
+        <button class="btn btn--line btn--s filters-btn" type="button" data-filters-open><svg class="icon" aria-hidden="true"><use href="#i-filter"/></svg>Фільтри</button>
+        <span class="toolbar__found" aria-live="polite" data-found></span>
+        <span class="toolbar__spacer"></span>
+        <label class="sr-only" for="sort">Сортування</label>
+        <select class="select" id="sort" data-sort>
+          <option value="default">За каталогом</option>
+          <option value="name">За назвою</option>
+          <option value="standby">За струмом у черговому режимі</option>
+          <option value="docs">За кількістю документів</option>
+        </select>
+        <div class="seg" role="group" aria-label="Вигляд">
+          <button type="button" aria-pressed="true" data-view="grid"><svg class="icon icon--s" aria-hidden="true"><use href="#i-grid"/></svg>Картки</button>
+          <button type="button" aria-pressed="false" data-view="table"><svg class="icon icon--s" aria-hidden="true"><use href="#i-rows"/></svg>Таблиця</button>
+        </div>
+      </div>
+      <div data-results></div>
+    </section>
+  </div>
+</main>
+
+<div class="sheet-back" data-back></div>
+
+<div class="tray" data-tray role="region" aria-label="Порівняння">
+  <span class="tray__label">Порівняння</span>
+  <div class="tray__items" data-tray-items></div>
+  <button class="btn btn--light btn--s" type="button" data-compare-open><svg class="icon" aria-hidden="true"><use href="#i-compare"/></svg>Порівняти</button>
+</div>
+
+<section class="sheet" data-sheet aria-label="Порівняння моделей" aria-hidden="true">
+  <div class="sheet__head">
+    <h2>Порівняння моделей</h2>
+    <div style="display:flex;gap:12px;align-items:center">
+      <label class="check" style="font-size:14px"><input type="checkbox" data-only-diff>Лише відмінності</label>
+      <button class="sheet__close" type="button" aria-label="Закрити порівняння" data-sheet-close><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+  </div>
+  <div class="sheet__body"><div class="cmp-wrap" data-cmp-body></div></div>
+</section>
+
+<div data-footer></div>
+
+<script src="js/products.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
+<script src="js/catalog.js?v=4"></script>
+</body>
+</html>

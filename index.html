@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>АРТОН — пожежні сповіщувачі та ППКП українського виробництва</title>
+<meta name="description" content="ПП «АРТОН», Чернівці, з 1998 року. Пожежні сповіщувачі, ППКП, адресна система «Вектор». Характеристики, паспорти та сертифікати ДСТУ EN 54 для кожної моделі.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f7f9fc">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght,SHRP@300..800,0..100&family=Fira+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body data-page="home">
+<!--
+THESIS: Сайт виробника як протокол випробувань: головна доводить якість вимірюванням (діапазони спрацювання з паспортів), а не слоганами; відмовляється від темного «продуктового» героя з рендером і від корпоративного червоного банера.
+OWN-WORLD: Фірмовий синій АРТОН #1362ad займає великі площини (панель графіка-протоколу, кнопки), глибокий #0b2a4a — «камера» підбору і підвал; холодний світлий фон #f7f9fc, чорнила #0e1726, міліметрівка лише під графіками й зразками; червоний #e0251b тільки для «Пожежа». Geologica + Fira Mono для вимірювань; таблиці протоколу, розмірні лінії, реєстрові рядки.
+STORY: Відвідувач бачить, що АРТОН виміряно-сертифікований виробник, знаходить модель за кодом, підбирає клас, завантажує паспорт і знаходить дилера у своєму місті.
+FIRST VIEWPORT: Ліворуч заголовок, два дії (Каталог / Де купити) і пошук за моделлю; праворуч на 7/12 — живий графік нагріву з брекетами A1/A2/B і зразком FT-A2, що переходить у «ПОЖЕЖА».
+FORM: «Протокол випробувань», кандидат 5 власного списку, seed 4d616e81.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+-->
+<div data-header></div>
+
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <h1>Пожежні сповіщувачі, <em>виміряні</em> за EN&nbsp;54</h1>
+        <p class="hero__lead">ПП «АРТОН» з 1998 року розробляє і виробляє в Чернівцях сповіщувачі, приймально-контрольні прилади та адресну систему «Вектор». Характеристики, паспорти й сертифікати кожної моделі — в одному місці.</p>
+        <div class="hero__actions">
+          <a class="btn btn--ink" href="catalog.html">Каталог продукції <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="link-arrow" href="#buy">Де купити у вашому місті <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="hero__search">
+          <div class="search" role="search">
+            <svg class="icon icon--s" aria-hidden="true"><use href="#i-search"/></svg>
+            <label class="sr-only" for="q-hero">Знайти модель</label>
+            <input id="q-hero" type="search" autocomplete="off" placeholder="Знайти модель: код або назва" data-search data-search-primary>
+            <kbd aria-hidden="true">/</kbd>
+            <div class="search-pop" role="listbox"></div>
+          </div>
+          <p class="hero__search-hint">Часто шукають:
+            <button type="button" data-fill="SPD-3">SPD-3</button>,
+            <button type="button" data-fill="FT-A2">FT-A2</button>,
+            <button type="button" data-fill="SPR-3L">SPR-3L</button>,
+            <button type="button" data-fill="Вектор">Вектор-1</button>
+          </p>
+        </div>
+      </div>
+
+      <figure class="test" style="margin:0" aria-labelledby="test-cap">
+        <div class="test__head">
+          <b>ДСТУ EN 54-5</b><span>Статична температура спрацювання</span>
+          <div class="test__readout" aria-live="off"><div><span>T </span><b data-t>24.0</b> °C</div><div><span>t </span><b data-time>00:00</b></div></div>
+        </div>
+        <div class="test__plot mm">
+          <svg viewBox="0 0 800 520" preserveAspectRatio="none" id="plot" role="img" aria-labelledby="test-cap"></svg>
+          <div class="specimen-chip" data-chip>
+            <img src="img/products/prd_img_ft-rt_13.webp" alt="Тепловий сповіщувач FT-A2">
+            <div><b>FT-A2</b><span>клас A2 · 54–70 °C</span><span class="state"><i class="led"></i><em style="font-style:normal" data-state>Черговий режим</em></span></div>
+          </div>
+        </div>
+        <figcaption class="test__foot" id="test-cap">
+          <span class="legend"><i></i>Ілюстративна крива нагріву</span>
+          <span class="legend"><i class="r"></i>Діапазон спрацювання за паспортом</span>
+          <button class="test__replay" type="button" data-replay><svg class="icon icon--s" aria-hidden="true"><use href="#i-replay"/></svg>Повторити</button>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="wrap" style="margin-top:clamp(48px,6vw,80px)">
+      <dl class="report">
+        <div><dt>Засновано</dt><dd>1998 рік, <span class="mono">ПП «АРТОН»</span></dd></div>
+        <div><dt>Виробництво</dt><dd>Власне, Чернівці, вул.&nbsp;Прутська,&nbsp;6</dd></div>
+        <div><dt>Відповідність</dt><dd><span class="mono">ДСТУ EN 54-5, -7, -11, -12, -29</span></dd></div>
+        <div><dt>Поставки</dt><dd>Україна · ЄС · Молдова</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= НОМЕНКЛАТУРА ================= -->
+  <section class="section section--tight" id="products">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Номенклатура</h2>
+        <p>Від точкового сповіщувача до адресної системи на об’єкт: усе, що потрібно для сигналізації, розроблено й зібрано на одному підприємстві.</p>
+      </div>
+      <div class="register" data-register></div>
+    </div>
+  </section>
+
+  <!-- ================= КАМЕРА: ПІДБІР КЛАСУ ================= -->
+  <section class="section chamber" id="select">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Який тепловий сповіщувач потрібен приміщенню?</h2>
+        <p>Вкажіть звичайну максимальну температуру в приміщенні — підкажемо клас за ДСТУ EN&nbsp;54-5 і моделі АРТОН, що йому відповідають.</p>
+      </div>
+      <div class="chamber__grid">
+        <div class="dial">
+          <label class="dial__label" for="room">Максимальна температура в приміщенні за звичайних умов</label>
+          <div class="dial__value"><output for="room" data-room-out>35</output><span>°C</span></div>
+          <input class="range" id="room" type="range" min="15" max="75" step="1" value="35">
+          <div class="dial__scale"><span>15</span><span>30</span><span>45</span><span>60</span><span>75</span></div>
+
+          <div class="switches">
+            <label class="switch">
+              <input type="checkbox" data-sw="S"><span class="switch__track"></span>
+              <span><b>Бувають різкі перепади температури</b><small>Кухні, котельні — варіанти з індексом S не спрацьовують від швидкого нагріву нижче порогу.</small></span>
+            </label>
+            <label class="switch">
+              <input type="checkbox" data-sw="R"><span class="switch__track"></span>
+              <span><b>Потрібна реакція на швидкість наростання</b><small>Максимально-диференційні варіанти з індексом R реагують і на темп зростання температури.</small></span>
+            </label>
+          </div>
+          <p class="dial__note">Підбір орієнтовний. Остаточний вибір — у проєкті згідно з ДБН В.2.5-56:2014 та паспортом виробу.</p>
+        </div>
+        <div class="classes" data-classes aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ВЕКТОР ================= -->
+  <section class="section" id="vektor">
+    <div class="wrap vektor">
+      <figure class="scheme" style="margin:0">
+        <svg viewBox="0 0 760 440" role="img" aria-label="Однолінійна схема адресної системи Вектор">
+          <defs>
+            <pattern id="mmv" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="rgba(201,104,52,.08)"/></pattern>
+            <pattern id="mmV" width="50" height="50" patternUnits="userSpaceOnUse"><rect width="50" height="50" fill="url(#mmv)"/><path d="M50 0H0V50" fill="none" stroke="rgba(201,104,52,.18)"/></pattern>
+          </defs>
+          <rect width="760" height="440" fill="url(#mmV)"/>
+          <!-- лінія зв'язку -->
+          <path class="wire" d="M200 220 H700"/>
+          <path class="pulse" d="M200 220 H700"/>
+          <path class="wire" d="M200 250 H240 V360 H700" stroke-dasharray="5 5"/>
+          <text x="248" y="352">інтерфейс → пульт ПДУ-Вектор</text>
+          <!-- ППКП -->
+          <g class="node">
+            <rect x="40" y="150" width="160" height="140" rx="8"/>
+            <image href="img/products/prd_img_vektor_1.webp" x="58" y="160" width="124" height="90" style="mix-blend-mode:multiply"/>
+            <text class="t" x="56" y="274">Вектор-1</text>
+          </g>
+          <text x="40" y="136">ППКП адресний</text>
+          <!-- пристрої на лінії -->
+          <g class="node"><line x1="300" y1="220" x2="300" y2="160" class="wire"/><circle class="body" cx="300" cy="136" r="24"/><text class="t" x="270" y="92">СПД-3А</text><text x="266" y="110">димовий</text></g>
+          <g class="node"><line x1="400" y1="220" x2="400" y2="160" class="wire"/><circle class="body" cx="400" cy="136" r="24"/><text class="t" x="374" y="92">СПТ-АВ</text><text x="370" y="110">тепловий</text></g>
+          <g class="node"><line x1="500" y1="220" x2="500" y2="160" class="wire"/><rect x="478" y="114" width="44" height="44" rx="4"/><text class="t" x="474" y="92">SPR-4L</text><text x="480" y="110">ручний</text></g>
+          <g class="node"><line x1="600" y1="220" x2="600" y2="160" class="wire"/><rect x="572" y="118" width="56" height="36" rx="4"/><text class="t" x="566" y="92">ААК-24РМ</text><text x="556" y="110">адаптер + ізолятор КЗ</text></g>
+          <text x="610" y="212">адресна лінія</text>
+        </svg>
+        <figcaption class="scheme__cap"><span>Спрощена схема для ознайомлення</span><span class="mono">«Вектор» · власна розробка</span></figcaption>
+      </figure>
+      <div class="vektor__text">
+        <h2>Адресна система «Вектор»</h2>
+        <p>Власна розробка АРТОН: адресний ППКП, сповіщувачі, адаптери, релейні блоки, пульти й програмне забезпечення для конфігурування — усе від одного виробника.</p>
+        <ul class="vektor__list">
+          <li><a href="https://arton.com.ua/products/address_system_vektor/description/"><span>Опис системи та склад обладнання</span><svg class="icon icon--s" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="https://arton.com.ua/news/"><span>Рекомендації з проєктування СПСО на «Вектор-1» за зміною №2 ДБН В.2.5-56</span><svg class="icon icon--s" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          <li><a href="https://arton.com.ua/downloads/software/"><span>Програмне забезпечення для Вектор-1</span><span class="mono">6,6 МБ</span></a></li>
+        </ul>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn--ink" href="tel:+380508622776"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Представник з адресних систем</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ДОКУМЕНТАЦІЯ ================= -->
+  <section class="section" id="docs" style="background:var(--sheet);border-block:1px solid var(--rule)">
+    <div class="wrap docs">
+      <div class="docs__intro">
+        <h2>Паспорти й сертифікати без пошуку</h2>
+        <p>Документи прив’язані до моделей. Введіть код — і завантажуйте потрібний PDF.</p>
+        <div class="search" role="search" style="width:100%;height:50px;margin-top:28px">
+          <svg class="icon icon--s" aria-hidden="true"><use href="#i-search"/></svg>
+          <label class="sr-only" for="q-docs">Модель для пошуку документів</label>
+          <input id="q-docs" type="search" autocomplete="off" placeholder="Напр. SPR-3L або ДЛ3" data-docs-q>
+        </div>
+        <div class="docs__filter" data-docs-kinds></div>
+      </div>
+      <div>
+        <table class="table">
+          <thead><tr><th>Модель</th><th>Документ</th><th class="hide-s">Розмір</th><th></th></tr></thead>
+          <tbody data-docs-body></tbody>
+        </table>
+        <p class="docs__more" data-docs-more></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ДЕ КУПИТИ ================= -->
+  <section class="section" id="buy">
+    <div class="wrap buy">
+      <div class="buy__intro">
+        <h2>Де купити</h2>
+        <p>Продукцію АРТОН постачають офіційні дилери в обласних центрах України. Оберіть місто.</p>
+        <div class="cities" data-cities role="group" aria-label="Місто"></div>
+        <div class="buy__cta">
+          <b>Для дилерів і монтажних організацій</b>
+          <p class="mono">Прайс-лист станом на 13.08.2026</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn btn--ink btn--s" href="https://arton.com.ua/prajs/"><svg class="icon" aria-hidden="true"><use href="#i-down"/></svg>Прайс-лист PDF</a>
+            <a class="btn btn--line btn--s" href="tel:+380372557498">Стати дилером</a>
+          </div>
+        </div>
+      </div>
+      <div class="dealers" data-dealers aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ================= НОВИНИ ================= -->
+  <section class="section" id="news" style="padding-top:0">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Новини підприємства</h2>
+        <p><a class="link-arrow" href="https://arton.com.ua/news/">Усі новини <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+      </div>
+      <div class="journal">
+        <a href="https://arton.com.ua/news/rekomendacii_spso_minimizacii_nesprav/">
+          <time datetime="2026-09-10">10.09.2026</time>
+          <div><h3>Рекомендації з проєктування СПСО на основі адресного ППКП «Вектор-1» з мінімізацією впливу несправностей у лініях зв’язку</h3><p>Для проєктувальників: вимоги зміни №2 до ДБН В.2.5-56:2014 «Системи протипожежного захисту», розділ 20.</p></div>
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="https://arton.com.ua/">
+          <time datetime="2026-09-22">22–25.09.2026</time>
+          <div><h3>АРТОН на виставці Security Essen, Німеччина</h3><p>Запрошуємо на стенд: зал 5, стенд 5C19, м. Ессен.</p></div>
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="https://arton.com.ua/news/">
+          <time datetime="2026-04-21">21.04.2026</time>
+          <div><h3>Сертифікат відповідності ДСТУ EN 54-29:2022 на мультисенсорні сповіщувачі SPD-3.3-N та SPD-3.5-N</h3><p>Комбінація датчиків диму та тепла для загального застосування в системах пожежної сигналізації будівель.</p></div>
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="https://arton.com.ua/news/vystavka_securex_2026/">
+          <time datetime="2026-04-14">14–16.04.2026</time>
+          <div><h3>Участь у міжнародній виставці SECUREX, Познань</h3><p>Спільно з дистриб’ютором у Європейському Союзі.</p></div>
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-footer></div>
+
+<script src="js/products.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
+<script src="js/home.js?v=4"></script>
+</body>
+</html>
