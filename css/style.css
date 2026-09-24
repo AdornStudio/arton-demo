@@ -183,7 +183,7 @@ p { margin: 0; text-wrap: pretty; }
 .nav { display: flex; gap: 4px; }
 .nav a {
   padding: 8px 12px; border-radius: 8px;
-  font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-2);
+  font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-2); white-space: nowrap;
   transition: color 0.2s, background-color 0.2s;
 }
 .nav a:hover { color: var(--ink); background: var(--sheet-2); }
@@ -746,9 +746,15 @@ p { margin: 0; text-wrap: pretty; }
 .mnav__foot { margin-top: auto; display: grid; gap: 10px; font-size: 14px; color: var(--ink-2); }
 
 /* ============================ Responsive ============================ */
-@media (max-width: 1180px) {
+@media (max-width: 1320px) {
+  .header .wrap { gap: 18px; }
+  .nav { gap: 0; }
   .nav a { padding: 8px 9px; font-size: 14.5px; }
-  .search { width: 220px; }
+  .header .search { width: 210px; }
+}
+@media (max-width: 1180px) {
+  .header .search kbd { display: none; }
+  .header .search { width: 170px; }
   .logo__since { display: none; }
 }
 
